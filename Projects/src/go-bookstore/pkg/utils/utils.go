@@ -1,10 +1,15 @@
 package utils
 
 import (
-	_ "encoding/json"
-	_ "io/ioutil"
+	"encoding/json"
+	"io"
 	"net/http"
-	_ "net/http"
 )
 
-func ParseBody(r *http.Request)
+func ParseBody(r *http.Request, x interface{}) {
+	if body, err := io.ReadAll(r.Body); err == nil {
+		if err := json.Unmarshal([]byte(body), x); err != nil {
+			return
+		}
+	}
+}
