@@ -84,5 +84,5 @@ func UpdateBook(w http.ResponseWriter, r *http.Request) {
 	res, _ := json.Marshal(bookDetails)
 	w.Header().Set("Content-Type", "pkglication/json")
 	w.WriteHeader(http.StatusOK)
-	w.Write(res1)
+	w.Write(res)
 }
