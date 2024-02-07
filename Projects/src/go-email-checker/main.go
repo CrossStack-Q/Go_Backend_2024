@@ -22,9 +22,9 @@ func main() {
 	for scanner.Scan() {
 		checkDomain(scanner.Text())
 	}
-
 	if err := scanner.Err(); err != nil {
-		log.Fatal("Error:could not read fro input: %v \n", err)
+		errorMessage := fmt.Sprintf("Error: could not read from input: %v", err)
+		log.Fatal(errorMessage)
 	}
 }
 
