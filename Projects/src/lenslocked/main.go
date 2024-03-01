@@ -10,7 +10,8 @@ func handlerFunc(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", handlerFunc)
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", handlerFunc)
 	fmt.Println("Starting server on :3000")
 	http.ListenAndServe(":3000", nil)
 }
