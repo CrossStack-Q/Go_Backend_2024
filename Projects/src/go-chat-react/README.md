@@ -1,11 +1,7 @@
 
 # Go Chat App
 
-Go Chat App is made by using go and react . It uses WebSocket and Websocket is made in go . 
-## Demo
-
-Insert gif or link to demo
-
+Go Chat App is made by using go and react . It uses Websocket is made in go . 
 
 ## Tech Stack
 
