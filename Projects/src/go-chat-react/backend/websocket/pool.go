@@ -25,14 +25,14 @@ func (pool *Pool) Start() {
 		select {
 		case client := <-pool.Register:
 			pool.Clients[client] = true
-			fmt.Println("Total connection pool = ", len(pool.Clients))
+			fmt.Println("Total connection pool Re = ", len(pool.Clients))
 			for k, _ := range pool.Clients {
 				fmt.Println(k)
 				k.Conn.WriteJSON(Message{Type: 1, Body: "New User added"})
 			}
 		case client := <-pool.Unregister:
 			delete(pool.Clients, client)
-			fmt.Println("Total connection pool = ", len(pool.Clients))
+			fmt.Println("Total connection pool Un = ", len(pool.Clients))
 			for k, _ := range pool.Clients {
 				fmt.Println(k)
 				k.Conn.WriteJSON(Message{Type: 1, Body: "User Disconnected"})

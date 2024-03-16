@@ -1,7 +1,7 @@
 package main
 
 import (
-	"chat-app/websocket"
+	websocket "chat-app/websocket"
 	"log"
 	"net/http"
 )
@@ -10,6 +10,7 @@ func serverWS(pool *websocket.Pool, w http.ResponseWriter, r *http.Request) {
 	conn, err := websocket.Upgrade(w, r)
 	if err != nil {
 		log.Println(err)
+		return
 	}
 
 	client := &websocket.Client{
