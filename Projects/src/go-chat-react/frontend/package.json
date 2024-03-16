@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"cd backend && go run main.go\"",
+    "dev": "concurrently \"next dev\" \"cd .. && cd backend && go run main.go\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

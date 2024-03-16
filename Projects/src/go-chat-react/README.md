@@ -11,7 +11,7 @@ Insert gif or link to demo
 
 **Client:** React, TailwindCSS
 
-**Server:** Go
+**Server:** Go <img src="https://raw.githubusercontent.com/sairol/extra/main/go-lang.png" width="30" height="30" />
 
 - Go Routines
 - Go Channels
@@ -19,8 +19,6 @@ Insert gif or link to demo
 - WebServer
 
 
-![Logo](https://raw.githubusercontent.com/sairol/extra/main/go-lang.png)
-<img src="https://raw.githubusercontent.com/sairol/extra/main/go-lang.png" width="100" height="100" />
 
 ## Run Locally
 
